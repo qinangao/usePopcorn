@@ -10,7 +10,7 @@ const starContainerStyle = {
   display: "flex",
 };
 
-export default function StaringRating({
+export default function StarRating({
   maxRating = 5,
   color = "#fcc419",
   size = 48,
@@ -24,7 +24,7 @@ export default function StaringRating({
 
   function handleRating(rating) {
     setRating(rating);
-    onSetRating(rating);
+    onSetRating && onSetRating(rating);
   }
 
   const textStyle = {
